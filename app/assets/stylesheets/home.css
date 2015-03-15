@@ -1,0 +1,19 @@
+.navbar .container .right-side {
+  float:right;
+}
+
+
+.right-side a{
+  color:#9D9D9D;
+  padding:12px 8px;
+  display:inline-block;
+  font-size:16px;
+}
+
+
+.right-side a:hover{
+  color:white;
+  text-decoration:none;
+  background:none;
+}
+

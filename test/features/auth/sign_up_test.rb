@@ -1,18 +1,19 @@
 require "test_helper"
 
-class Auth::SignUpTest < Capybara::Rails::TestCase
-  feature "As a site visitor
-          I want to be able to create an account
-          so that I can access to more parts of the site" do
-    scenario "Sign Up" do
-      #Given a registration form
-      visit root_path
-      click_on("Sign Up")
+feature "As a visitor, I want to sign up, so that I can use my account" do
+  scenario "" do
+    #when I click on Sign Up, I should get a registration form
+    visit root_path
+    click_on "Sign Up"
 
-      #When I register with valid credentials
-      fill_in "Email", with: "testUser@test.com"
-      fill_in "Password", with: "testPassword"
-      fill_in "Password Confirmation", with: "testPassword"
-    end
+    #then I register with valid info
+    fill_in "Email", with: "test@example.com"
+    fill_in "Password", with: "password"
+    fill_in "Password confirmation", with: "password"
+    click_on "Create Authenticate"
+
+    #then I should have an account
+    page.must_have_content "welcome! You have signed up successfully"
+    page.wont_have_content "There was a probem with your sign up"
   end
 end
