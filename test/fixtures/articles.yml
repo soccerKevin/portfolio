@@ -1,10 +1,6 @@
 # Read about fixtures at
 # http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  title: MyString
-  body: MyText
-
-two:
-  title: MyString
-  body: MyText
+first:
+  title: A Title
+  body: Some Content
