@@ -15,6 +15,37 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<% if notice %>
+  <p class="alert alert-success"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
+
+
+
+<div class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Kevin Townsend</a>
+      <div class="right-side">
+          <% if user_signed_in? %>
+            logged in as <strong><%= current_user.email %></strong>.
+            <%= link_to 'Edit profile', edit_user_registration_path %> |
+            <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+          <!--<% else %>
+            <%= link_to 'Sign up', new_user_registration_path %>
+            <%= link_to 'Login', new_user_session_path %>-->
+          <% end %>
+      </div>
+    </div><!-- /.container -->
+</div><!-- /.navbar -->
+
+
 
 <%= yield %>
 
