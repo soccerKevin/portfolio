@@ -1,10 +1,6 @@
 # Read about fixtures at
 # http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  name: MyString
-  technologies_used: MyText
-
-two:
-  name: MyString
+first:
+  name: MyName
   technologies_used: MyText

@@ -8,7 +8,7 @@ feature "As the site owner, I want to add a portfolio item so that I can show of
     fill_in "Name", with: "Code Fellows Portfolio"
     fill_in "Technologies used", with: "Rails, Ruby, Bootstrap, HTML5, CSS3"
     click_on "Create Project"
-    page.text.must_include "Project has been created"
+    page.text.must_include "Project was successfully created."
     assert page.has_css?("#notice"), "Expected a flash notice on this page, none found."
     page.status_code.must_equal 200
   end
@@ -21,40 +21,40 @@ feature "As a developer I want all parts of crud to work for my projects" do
     visit projects_path
 
     #then I should see some articles
-    page.text.must_include "Listing Articles"
+    page.text.must_include "Listing Projects"
   end
 
   scenario "As a freelancer, I want to show 1 project" do
     #given I visit the articles page
-    visit projects_path articles(:first)
+    visit projects_path projects(:first)
 
     #then I should see some articles
-    page.text.must_include "A Title"
+    page.text.must_include "MyName"
   end
 
   scenario "As a freelancer, I want to create new projects" do
     #when I fill out a new article form
-    visit new_projects_path
-    fill_in "Title", with: "A Title"
-    fill_in "Body", with: "Some content here"
+    visit new_project_path
+    fill_in "Name", with: "A Name"
+    fill_in "Technologies used", with: "Rails, Ruby, CSS, Bootstrap, HTML5"
 
     #when I submit article 
-    click_on "Create Article"
+    click_on "Create Project"
 
     #then I should have a new article
-    page.text.must_include "Article was successfully created"
+    page.text.must_include "Project was successfully created"
   end
 
   scenario "As a freelancer, I want to edit existing projects" do
     #given I have an existing article
-    visit edit_projects_path articles(:first)
-    fill_in "Title", with: "A Different Title"
+    visit edit_project_path projects(:first)
+    fill_in "Name", with: "My Name"
 
     #when I edit the article
-    click_on "Update Article"
+    click_on "Update Project"
 
     #then the article should be updated
-    page.text.must_include "Article was successfully updated"
+    page.text.must_include "Project was successfully updated"
   end
 
   scenario "As a freelancer, I want to delete existing projects" do
@@ -62,6 +62,6 @@ feature "As a developer I want all parts of crud to work for my projects" do
     visit projects_path
     click_on "Destroy"
 
-    page.text.must_include "Article was successfully destroyed"
+    page.text.must_include "Project was successfully destroyed"
   end
 end
