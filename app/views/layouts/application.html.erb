@@ -8,6 +8,17 @@
 </head>
 <body>
 
+<div id="top-nav">
+  <div class="right">
+    <% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
+  </div>
+</div>
+
 <%= yield %>
 
 </body>
