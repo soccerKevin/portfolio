@@ -50,4 +50,7 @@ end
 
 group :test do
   gem 'minitest-rails-capybara'
+  gem 'guard'
+  gem 'guard-minitest'
+  gem 'minitest-reporters'
 end

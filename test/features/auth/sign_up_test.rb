@@ -5,7 +5,7 @@ feature("
   so that I can perform actions that require me to be logged in.") do
   scenario "sign up" do
     # Given a registration form
-    visit "/"
+    visit root_path
     click_on "Sign up"
 
     # When I register with valid info
