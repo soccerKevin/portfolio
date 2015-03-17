@@ -18,3 +18,25 @@ feature("
     page.wont_have_content "There was a problem with your sign up"
   end
 end
+
+
+feature "As a user I want to be able to sign in" do
+  scenario "Sign In" do
+    visit new_user_session_path
+    fill_in "Email", with: "dude@example.com"
+    fill_in "Password", with: "password"
+    click_button "Log in"
+    
+    page.text.must_include "Logged in as"
+  end
+
+  scenario "Sign Out" do
+    visit new_user_session_path
+    fill_in "Email", with: "dude@example.com"
+    fill_in "Password", with: "password"
+    click_button "Log in"
+
+    click_on "Logout"
+    page.text.must_include "Sign up"
+  end
+end

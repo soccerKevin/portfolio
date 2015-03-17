@@ -4,8 +4,6 @@ feature "As a user I want my articles connected to my account so that I can be a
   scenario "As a signed in user, I can edit articles" do
     #given I'm signed in
     visit user_session_path
-    sign_in @user
-    puts page.html
 
   end
 end
