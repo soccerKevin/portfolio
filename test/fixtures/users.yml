@@ -11,12 +11,12 @@ dude:
 
 author1:
   email: author1@example.com
-  encrypted_password: <%= User.new.send(:password_digest, 'author1') %>
+  encrypted_password: <%= User.new.send(:password_digest, 'password') %>
 
 author2:
   email: author2@example.com
-  encrypted_password: <%= User.new.send(:password_digest, 'author2') %>  
+  encrypted_password: <%= User.new.send(:password_digest, 'password') %>  
 
 editor:
   email: editor@example.com
-  encrypted_password: <%= User.new.send(:password_digest, 'editor') %>
+  encrypted_password: <%= User.new.send(:password_digest, 'password') %>
