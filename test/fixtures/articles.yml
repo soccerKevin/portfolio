@@ -3,4 +3,10 @@
 
 first:
   title: A Title
-  body: Some Content
+  body: body1
+  author_id: 997404298
+
+second:
+  title: Title2
+  body: body2
+  author_id: 997404298

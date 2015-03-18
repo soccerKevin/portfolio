@@ -19,6 +19,7 @@ feature "As a developer I want all parts of crud to work on my blog" do
   end
 
   scenario "As a blog owner, I want to create a new article" do
+    login
     #when I fill out a new article form
     visit new_article_path
     fill_in "Title", with: "A Title"
@@ -32,6 +33,7 @@ feature "As a developer I want all parts of crud to work on my blog" do
   end
 
   scenario "As a blog owner, I want to edit an existing article" do
+    login
     #given I have an existing article
     visit edit_article_path articles(:first)
     fill_in "Title", with: "A Different Title"
@@ -44,9 +46,10 @@ feature "As a developer I want all parts of crud to work on my blog" do
   end
 
   scenario "As a blog owner, I want to delete existing article" do
+    login
     #given that I have an existing article
     visit articles_path
-    click_on "Destroy"
+    first(:link, "Destroy").click
 
     page.text.must_include "Article was successfully destroyed"
   end
