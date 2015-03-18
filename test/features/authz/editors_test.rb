@@ -4,6 +4,7 @@ feature "As an editor, I want access to all articles" do
   scenario "As an editor, I want to see all articles" do
     login(:editor)
 
+    visit articles_path
     page.text.must_include users(:editor).email
     page.text.must_include users(:author2).email
     page.text.must_include "Published"

@@ -5,13 +5,16 @@ first:
   title: A Title
   body: body1
   author_id: 997404298
+  published: false
 
 second:
   title: Title2
   body: body2
   author_id: 997404298
+  published: false
 
 cr:
   title: someTitle
   body: someBody
   author_id: 997404298
+  published: false
