@@ -10,3 +10,8 @@ second:
   title: Title2
   body: body2
   author_id: 997404298
+
+cr:
+  title: someTitle
+  body: someBody
+  author_id: 997404298

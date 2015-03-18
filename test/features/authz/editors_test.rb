@@ -41,7 +41,7 @@ feature "As an editor, I want access to all articles" do
     page.text.must_include "Published"
 
     #when I click edit on an article
-    find("table").first(:link, "Destroy").click
+    #find("table").first(:link, "Destroy").click
 
     #I should see the deleted screen
     page.text.must_include "Article was successfully destroyed."
@@ -56,5 +56,21 @@ feature "As an editor, I want access to all articles" do
     page.must_have_field 'published'
 
     # TODO probably something about saving it here
+  end
+
+  scenario "As an editor I should be able to create new published articles?????" do
+    login(:editor)
+
+    visit new_article_path
+
+    page.must_have_field('published')
+
+    fill_in "Title", with: articles(:first).title
+    fill_in "Body", with: articles(:first).body
+    check "Published"
+    click_on "Create Article"
+
+    page.text.must_include "Status: Published"
+
   end
 end
