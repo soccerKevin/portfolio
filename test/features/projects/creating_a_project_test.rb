@@ -3,6 +3,7 @@ require 'test_helper.rb'
 
 feature "As the site owner, I want to add a portfolio item so that I can show off my work" do
   scenario "adding a new project" do
+    login
     visit projects_path
     click_on "New Project"
     fill_in "Name", with: "Code Fellows Portfolio"
@@ -17,6 +18,7 @@ end
 
 feature "As a developer I want all parts of crud to work for my projects" do 
   scenario "As a freelancer, I want to display all my projects" do
+    login
     #given I visit the articles page
     visit projects_path
 
@@ -25,6 +27,7 @@ feature "As a developer I want all parts of crud to work for my projects" do
   end
 
   scenario "As a freelancer, I want to show 1 project" do
+    login
     #given I visit the articles page
     visit projects_path projects(:first)
 
@@ -33,6 +36,7 @@ feature "As a developer I want all parts of crud to work for my projects" do
   end
 
   scenario "As a freelancer, I want to create new projects" do
+    login
     #when I fill out a new article form
     visit new_project_path
     fill_in "Name", with: "A Name"
@@ -46,6 +50,7 @@ feature "As a developer I want all parts of crud to work for my projects" do
   end
 
   scenario "As a freelancer, I want to edit existing projects" do
+    login
     #given I have an existing article
     visit edit_project_path projects(:first)
     fill_in "Name", with: "My Name"
@@ -58,6 +63,7 @@ feature "As a developer I want all parts of crud to work for my projects" do
   end
 
   scenario "As a freelancer, I want to delete existing projects" do
+    login
     #given that I have an existing article
     visit projects_path
     click_on "Destroy"
