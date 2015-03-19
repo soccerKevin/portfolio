@@ -22,19 +22,13 @@ end
 
 feature "As a user I want to be able to sign in" do
   scenario "Sign In" do
-    visit new_user_session_path
-    fill_in "Email", with: "dude@example.com"
-    fill_in "Password", with: "password"
-    click_button "Log in"
+    login_as
     
     page.text.must_include "Logged in as"
   end
 
   scenario "Sign Out" do
-    visit new_user_session_path
-    fill_in "Email", with: "dude@example.com"
-    fill_in "Password", with: "password"
-    click_button "Log in"
+    login_as
 
     click_on "Logout"
     page.text.must_include "Sign up"

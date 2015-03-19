@@ -7,19 +7,42 @@
       <th>Title</th>
       <th>Body</th>
       <th>Author</th>
+      <th>Status</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @articles.each do |article| %>
+    <% next unless article.published? || article.author == current_user || policy(article).publish? %>
       <tr>
         <td><%= article.title %></td>
         <td><%= article.body %></td>
         <td><%= article.author.email %></td>
+        <% unless policy(article).publish? %>
+          <td>
+            <%= article.published? ? "Published" : "Unpublished" %>
+          </td>
+        <% end %>
+        <% if policy(article).publish? %>
+        <td>
+          <%= form_for(article) do |f| %>
+            <div class="field">
+              <%= f.label :published %>
+              <%= f.check_box :published %>
+            </div>
+            <div class="actions">
+            <%= f.submit %>
+          </div>
+          <% end %>
+        </td>
+        <% end %>
+
         <td><%= link_to 'Show', article %></td>
         <td><%= link_to 'Edit', edit_article_path(article) if user_signed_in?  %></td>
-        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } if user_signed_in?  %></td>
+        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } if policy(article).delete? %></td>
+        <td>
+        </td>
       </tr>
     <% end %>
   </tbody>
@@ -27,4 +50,6 @@
 
 <br>
 
+<% if user_signed_in? %>
 <%= link_to 'New Article', new_article_path %>
+<% end %>
