@@ -18,22 +18,8 @@ feature "As a developer I want all parts of crud to work on my blog" do
     page.text.must_include "A Title"
   end
 
-  scenario "As a blog owner, I want to create a new article" do
-    login
-    #when I fill out a new article form
-    visit new_article_path
-    fill_in "Title", with: "A Title"
-    fill_in "Body", with: "Some content here"
-
-    #when I submit article 
-    click_on "Create Article"
-
-    #then I should have a new article
-    page.text.must_include "Article was successfully created"
-  end
-
   scenario "As a blog owner, I want to edit an existing article" do
-    login
+    login_as
     #given I have an existing article
     visit edit_article_path articles(:first)
     fill_in "Title", with: "A Different Title"
@@ -45,12 +31,4 @@ feature "As a developer I want all parts of crud to work on my blog" do
     page.text.must_include "Article was successfully updated"
   end
 
-  scenario "As a blog owner, I want to delete existing article" do
-    login
-    #given that I have an existing article
-    visit articles_path
-    first(:link, "Destroy").click
-
-    page.text.must_include "Article was successfully destroyed"
-  end
 end

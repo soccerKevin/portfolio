@@ -2,7 +2,7 @@ class ApplicationPolicy
   attr_reader :user, :record
 
   def initialize(user, record)
-    @user = user
+    @user = user ? user : NullUser.new
     @record = record
   end
 
@@ -48,6 +48,16 @@ class ApplicationPolicy
 
     def resolve
       scope
+    end
+  end
+
+  class NullUser
+    def editor?
+      false
+    end
+
+    def author?
+      false
     end
   end
 end

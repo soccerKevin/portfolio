@@ -12,8 +12,7 @@ class ActiveSupport::TestCase
 
   # Add more helper methods to be used by all tests here...
   
-  def login(role = :visitor)
-    #given I'm signed in
+  def login_as(role = :author1)
     visit user_session_path
 
     fill_in "Email", with: users(role).email
