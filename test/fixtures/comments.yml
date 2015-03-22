@@ -1,0 +1,25 @@
+# Read about fixtures at
+# http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  commenter_name: troller
+  commenter_url: MyString
+  commenter_email: troller@example.com
+  user_ip: MyString
+  user_agent: MyString
+  referrer: MyString
+  content: Get a JOB!!!
+  approved: false
+  article: first
+
+
+two:
+  commenter_name: nonTroller
+  commenter_url: MyString
+  commenter_email: nonTroller@example.com
+  user_ip: MyString
+  user_agent: MyString
+  referrer: MyString
+  content: Stop Trolling
+  approved: false
+  article: first
