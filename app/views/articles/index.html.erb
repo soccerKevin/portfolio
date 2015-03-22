@@ -14,7 +14,6 @@
 
   <tbody>
     <% @articles.each do |article| %>
-    <% next unless article.published? || article.author == current_user || policy(article).publish? %>
       <tr>
         <td><%= article.title %></td>
         <td><%= article.body %></td>
@@ -32,17 +31,15 @@
               <%= f.check_box :published %>
             </div>
             <div class="actions">
-            <%= f.submit %>
-          </div>
+              <%= f.submit %>
+            </div>
           <% end %>
         </td>
         <% end %>
 
         <td><%= link_to 'Show', article %></td>
-        <td><%= link_to 'Edit', edit_article_path(article) if user_signed_in?  %></td>
+        <td><%= link_to 'Edit', edit_article_path(article) if policy(article).edit?  %></td>
         <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } if policy(article).delete? %></td>
-        <td>
-        </td>
       </tr>
     <% end %>
   </tbody>

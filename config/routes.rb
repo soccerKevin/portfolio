@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
+  # resources :comments
+
   devise_for :users
 
   resources :projects
 
-  resources :articles
+  resources :articles do
+    resources :comments
+  end
 
 
   root 'static#index'
