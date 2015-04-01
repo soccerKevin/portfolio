@@ -1,8 +1,0 @@
-require "test_helper"
-
-feature "As a freelancer, I want people to be able to send me emails" do
-  scenario "As an Employer, I want to email this guy" do
-    email = UserMailer.create_signup("lollygag@example.com", "Lolly Gag")
-    email.must deliver_to "lollygag@example.com"
-  end
-end
