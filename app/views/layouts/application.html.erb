@@ -33,6 +33,7 @@
       </button>
       <a class="navbar-brand" href="#">Kevin Townsend</a>
       <div class="right-side">
+          <%= link_to 'Contact me', contact_path %>
           <% if user_signed_in? %>
             logged in as <strong><%= current_user.email %></strong>.
             <%= link_to 'Edit profile', edit_user_registration_path %> |
