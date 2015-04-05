@@ -1,0 +1,34 @@
+# Read about fixtures at
+# http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+first:
+  title: A Title
+  body: body1
+  author_id: 383650541
+  published: true
+
+second:
+  title: Title2
+  body: body2
+  author_id: 217182653
+  published: false
+
+cr:
+  title: someTitle
+  body: someBody
+  author_id: 217182653
+  published: false
+
+someArticle:
+  title: someTitle
+  body: someBody
+  author_id: 383650541
+  published: false
+
+someArticle2:
+  title: someTitle
+  body: someBody
+  author_id: 383650541
+  published: true
+
+
