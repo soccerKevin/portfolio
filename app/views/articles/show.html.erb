@@ -22,7 +22,7 @@
 </p>
 <% end %>
 
-<%= link_to 'Edit', edit_article_path(@article) %>
+<%= link_to 'Edit', edit_article_path(@article) if policy(@article).edit? %>
 
 <% if @article.published? %>
 <h2>Comments</h2>
@@ -38,13 +38,20 @@
             <%= comment.commenter_name %>
           </td>
 
-          <td><%= link_to 'Destroy', [@article, comment] , method: :delete, data: { confirm: 'Are you sure?' } if policy(@article).delete? %></td>
+          <td>
+            <%= link_to 'Edit', [@article_comment] if policy(comment).edit  %>
+          </td>
+
+          <td>
+            <%= link_to 'Destroy', [@article, comment] , method: :delete, data: { confirm: 'Are you sure?' } if policy(comment).delete? %>
+          </td>
         </tr>
       </table>
     </div>
   <% end %>
 
-<%= render :partial => 'comments/form', :article => @article ,:comment => @comment %>
+
+<%= render :partial => 'comment/form', :article => @article ,:comment => @comment if user_signed_in? %>
 <% end %>
 
 
