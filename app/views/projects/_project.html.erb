@@ -1,7 +1,7 @@
-<tr>
-  <td><%= project.name %></td>
-  <td><%= project.technologies_used %></td>
+<tr class="tr<%= project.id %>">
+  <td class="name"><%= project.name %></td>
+  <td class="content"><%= project.technologies_used %></td>
   <td><%= link_to 'Show', project %></td>
-  <td><%= link_to 'Edit', edit_project_path(project) %></td>
-  <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <td><%= link_to 'Edit', edit_project_path(project), remote: true, class: :edit %></td>
+  <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' }, remote: true %></td>
 </tr>

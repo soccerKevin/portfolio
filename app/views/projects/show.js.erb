@@ -1,6 +1,6 @@
-$('#new_project').remove();
+$('#project_form').remove();
 $('#add_project').show();
+$('tr.tr<%= @project.id %> .name').html( "<%= @project.name %>" );
+$('tr.tr<%= @project.id %> .content').html( "<%= j @project.technologies_used %>" );
+$('tr.tr<%= @project.id %> .edit').show();
 
-$('#all_projects').append(
-  "<%= j render @project %>"
-);
