@@ -25,6 +25,10 @@ gem 'minitest-rails'
 
 gem 'devise'
 gem 'pundit'
+gem 'omniauth'
+gem 'omniauth-twitter'
+# gem 'omniauth-facebook'
+# gem 'omniauth-linkedin'
 
 
 group :production do
