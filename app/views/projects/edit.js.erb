@@ -1,4 +1,4 @@
 $('#add_project, tr.tr<%= @project.id %> .edit').hide();
 $('#all_projects').parent().after(
-  "<div id=\"project_form\"><h3>Editing <%= @project.name %></h3>" + "<%= j render 'form' %></div>"
+  "<div id=\"project_form\">" + "<%= j render 'form' %></div>"
 );
