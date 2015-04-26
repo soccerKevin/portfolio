@@ -3,6 +3,7 @@ require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 require "minitest/rails/capybara"
 require "minitest/reporters"
+require "minitest-matchers"
 require "email_spec"
 
 Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
