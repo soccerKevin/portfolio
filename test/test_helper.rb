@@ -8,10 +8,10 @@ require "email_spec"
 
 Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
 
-RSpec.configure do |config|
-  config.include(EmailSpec::Helpers)
-  config.include(EmailSpec::Matchers)
-end
+# RSpec.configure do |config|
+#   config.include(EmailSpec::Helpers)
+#   config.include(EmailSpec::Matchers)
+# end
 
 class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
