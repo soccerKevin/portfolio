@@ -63,4 +63,5 @@ group :test do
   gem 'guard'
   gem 'guard-minitest'
   gem 'minitest-reporters'
+  gem 'email_spec'
 end
