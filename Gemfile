@@ -62,6 +62,9 @@ group :test do
   gem 'minitest-rails-capybara'
   gem 'guard'
   gem 'guard-minitest'
+  gem 'minitest-rails'
+  gem 'minitest-matchers'
   gem 'minitest-reporters'
   gem 'email_spec'
+  gem 'rspec-rails'
 end
