@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'dotenv-rails', group: [:development, :test]
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
@@ -20,8 +21,6 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-
-gem 'minitest-rails'
 
 gem 'devise'
 gem 'pundit'
@@ -59,10 +58,11 @@ group :development, :test do
 end
 
 group :test do
+  gem 'codeclimate-test-reporter', require: nil
   gem 'minitest-rails-capybara'
+  gem 'minitest-rails'
   gem 'guard'
   gem 'guard-minitest'
-  gem 'minitest-rails'
   gem 'minitest-matchers'
   gem 'minitest-reporters'
   gem 'email_spec'
