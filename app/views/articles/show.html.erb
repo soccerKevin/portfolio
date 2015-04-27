@@ -39,11 +39,11 @@
           </td>
 
           <td>
-            <%= link_to 'Edit', [@article_comment] if policy(comment).edit  %>
+            <%= link_to 'Edit', [@article_comment] if policy(comment).edit?  %>
           </td>
 
           <td>
-            <%= link_to 'Destroy', [@article, comment] , method: :delete, data: { confirm: 'Are you sure?' } if policy(comment).delete? %>
+            <%= link_to 'Destroy', [@article, comment] , method: :delete, data: { confirm: 'Are you sure?' } if policy(comment).destroy? %>
           </td>
         </tr>
       </table>

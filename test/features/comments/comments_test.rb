@@ -3,6 +3,7 @@ require "test_helper"
 feature "As a visitor I want to be to able to comment on articles so that I can support articles I like" do
 
   scenario "As a visitor, I want to comment on articles" do
+    login_as
     #given that I see the articles
     visit articles_path
 
