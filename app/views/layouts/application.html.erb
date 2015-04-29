@@ -9,6 +9,13 @@
 <body>
 
 <div id="top-nav">
+  <nav id="main-nav">
+    <%= link_to "About Me", about_me_path %>
+    <%= link_to "Projects", projects_path %>
+    <%= link_to "Blog", articles_path %>
+    <%= link_to "Contact", contact_path %>
+  </nav>
+
   <div class="right">
     <% if user_signed_in? %>
       Logged in as <strong><%= current_user.email %></strong>.
