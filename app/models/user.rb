@@ -26,7 +26,7 @@ class User < ActiveRecord::Base
   end
 
   def password_required?
-    super && provuder.blank?
+    super && provider.blank?
   end
 
   def update_with_password(params, *options)
