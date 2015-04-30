@@ -14,5 +14,5 @@ Rails.application.routes.draw do
   end
 
   get '/about' => 'static#about', as: 'about_me'
-  root 'static#index'
+  root 'static#index', as: "home"
 end
