@@ -4,13 +4,13 @@ class ContactMailer < ApplicationMailer
 	def contact_email(contact)
 		@contact = contact
 	  data = {
-		  from: "#{@contact.name} <soccerkevint11@gmail.com>",
-		  to: "<soccerKevint11@gmail.com>",
+		  from: "#{@contact.name} <#{ENV['EMAIL']}>",
+		  to: "<#{ENV['EMAIL']}>",
 		  subject: "Portfolio",
 		  html: template
 		}
-	  RestClient.post "https://api:key-f5a5fc3d68380a56a48edd78f83cabe5"\
-  	"@api.mailgun.net/v3/townsendwebdd.com/messages", data
+	  RestClient.post "https://api:#{ENV['MAILGUN_KEY']}"\
+  	"@#{ENV['MAILGUN_API_SECRET']}", data
 
 		true
 	end
