@@ -14,6 +14,5 @@ Rails.application.routes.draw do
   end
 
   get '/about' => 'static#about', as: 'about_me'
-  get '/contact' => 'static#contact', as: 'contact'
   root 'static#index'
 end
