@@ -6,7 +6,7 @@ class ContactsController < ApplicationController
 	def create
 		@contact = Contact.new(contact_params)
 		@status = "Thank you for your message"
-		render html: :new
+		render :new, status: :ok
 	end
 
 private
