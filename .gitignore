@@ -18,3 +18,8 @@
 
 # Ignore environment variables
 /.env
+
+# Ignore DS_Stores
+.DS_Store
+**/.DS_Store
+**/**/.DS_Store
