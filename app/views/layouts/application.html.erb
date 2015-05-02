@@ -12,26 +12,28 @@
 
 <body class="<%= current_tab %>">
 
-<div id="top-nav" class="row clearfix">
-  <nav id="main-nav" class="xs-col-12 sm-col-5 left">
-    <%= link_to "Home", home_path %>
-    <%= link_to "About Me", about_me_path %>
-    <%= link_to "Projects", projects_path %>
-    <%= link_to "Blog", articles_path %>
-    <%= link_to "Contact", new_contact_path %>
-  </nav>
+<header id="main-header">
+  <div id="top-nav" class="container row clearfix">
+    <nav id="main-nav" class="col-xs-12 col-sm-5 left">
+      <%= link_to "Home", home_path %>
+      <%= link_to "About Me", about_me_path %>
+      <%= link_to "Projects", projects_path %>
+      <%= link_to "Blog", articles_path %>
+      <%= link_to "Contact", new_contact_path %>
+    </nav>
 
-  <nav id="sign-in-nav" class="xs-col-12 sm-col-4 right">
-    <% if user_signed_in? %>
-      Logged in as <strong><%= current_user.email %></strong>.
-      <%= link_to 'Edit profile', edit_user_registration_path %> |
-      <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-    <% else%>
-      <%= link_to "Sign up", new_user_registration_path %> |
-      <%= link_to "Login", new_user_session_path %>
-    <% end %>
-  </nav>
-</div>
+    <nav id="sign-in-nav" class="col-xs-12 col-sm-2 right">
+      <% if user_signed_in? %>
+        Logged in as <strong><%= current_user.email %></strong>.
+        <%= link_to 'Edit profile', edit_user_registration_path %> |
+        <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+      <% else%>
+        <%= link_to "Sign up", new_user_registration_path %> |
+        <%= link_to "Login", new_user_session_path %>
+      <% end %>
+    </nav>
+  </div>
+</header>
 
 <%= yield %>
 
