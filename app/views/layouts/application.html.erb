@@ -6,7 +6,8 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+
+<body class="<%= current_tab %>">
 
 <div id="top-nav">
   <nav id="main-nav">
@@ -26,6 +27,7 @@
       <%= link_to "Sign up", new_user_registration_path %> |
       <%= link_to "Login", new_user_session_path %> | 
       <%= link_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter) %>
+      <%= link_to "Sign in with Git Hub", user_omniauth_authorize_path(:github) %>
     <% end %>
   </div>
 </div>
