@@ -31,6 +31,7 @@ gem 'omniauth-twitter'
 gem 'omniauth-github'
 gem 'omniauth-facebook'
 gem 'rest-client'
+gem 'tabs_on_rails'
 # gem 'omniauth-linkedin'
 
 
