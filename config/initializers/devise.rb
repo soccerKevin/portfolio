@@ -33,6 +33,7 @@ Devise.setup do |config|
 
   config.omniauth :twitter, ENV['TWITTER_CONSUMER_KEY'], ENV['TWITTER_CONSUMER_SECRET']
   config.omniauth :github, ENV['GITHUB_ID'], ENV['GITHUB_SECRET']
+  config.omniauth :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_SECRET']
   # config.omniauth :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_SECRET'], scope: "email"
 
   # Configure parameters from the request object used for authentication. Each entry
