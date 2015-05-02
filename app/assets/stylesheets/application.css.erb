@@ -14,7 +14,30 @@
  *= require_self
  */
 
+
+img {
+	width:100%;
+}
+
 body{
-	background: url("<%= asset_path 'home1.jpg' %>") no-repeat center top;
+	background: url("<%= asset_path 'home1.jpg' %>") no-repeat center 50px;
 	background-size:100%;
+}
+
+body.about{
+	background:none;
+}
+
+.photo{
+	max-width:300px;
+	max-height:300px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	overflow:hidden;
+}
+
+.photo img{
+	width:120%;
+	margin-left:-5%;
 }
