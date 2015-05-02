@@ -69,6 +69,8 @@ table {
 
 
 /* GENERAL */
+
+
 img {
 	width:100%;
 }
@@ -83,6 +85,77 @@ img {
 
 .container{
 	position:relative;
+}
+
+.xs-text-left{
+	text-align:left;
+}
+
+.xs-text-right{
+	text-align:right;
+}
+
+.xs-text-center{
+	text-align:center;
+}
+
+.xs-text-justify{
+	text-align:justify;
+}
+
+
+@media (min-width: 768px) { 
+	.sm-text-left{
+		text-align:left;
+	}
+
+	.sm-text-right{
+		text-align:right;
+	}
+
+	.sm-text-center{
+		text-align:center;
+	}
+
+	.sm-text-justify{
+		text-align:justify;
+	}
+}
+
+@media (min-width: 992px) {
+	.md-text-left{
+		text-align:left;
+	}
+
+	.md-text-right{
+		text-align:right;
+	}
+
+	.md-text-center{
+		text-align:center;
+	}
+
+	.md-text-justify{
+		text-align:justify;
+	}
+}
+
+@media (min-width: 1200px) {
+	.lg-text-left{
+		text-align:left;
+	}
+
+	.lg-text-right{
+		text-align:right;
+	}
+
+	.lg-text-center{
+		text-align:center;
+	}
+
+	.lg-text-justify{
+		text-align:justify;
+	}
 }
 
 
@@ -126,9 +199,8 @@ body{
 /***** HEADER *****/
 header#main-header{
 	background:black;
+	color:white;
 }
-
-/*  HEADER  */
 
 #top-nav{
 	margin:0px auto;
@@ -142,14 +214,21 @@ header#main-header{
 	float:left;
 }
 
+#top-nav nav#sign-in-nav a{
+	float:right;
+}
+
 #top-nav nav a:hover{
 	text-decoration: none;
 }
 
+
+
+
 /***  HOME PAGE  ***/
 .index #name{
 	position:absolute;
-	right:47px;
+	right:43px;
 	top:10px;
 	color:white;
 	font-size:1.8em;
@@ -164,6 +243,14 @@ header#main-header{
 	left: 291px;
 }
 
+
+.index #name a{
+	color:white;
+}
+
+.index #name a:hover{
+	text-decoration:none;
+}
 
 /*   About Page  */
 body.about{
