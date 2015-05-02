@@ -5,12 +5,15 @@
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </head>
 
 <body class="<%= current_tab %>">
 
-<div id="top-nav">
-  <nav id="main-nav">
+<div id="top-nav" class="row clearfix">
+  <nav id="main-nav" class="xs-col-12 sm-col-5 left">
     <%= link_to "Home", home_path %>
     <%= link_to "About Me", about_me_path %>
     <%= link_to "Projects", projects_path %>
@@ -18,18 +21,16 @@
     <%= link_to "Contact", new_contact_path %>
   </nav>
 
-  <div class="right">
+  <nav id="sign-in-nav" class="xs-col-12 sm-col-4 right">
     <% if user_signed_in? %>
       Logged in as <strong><%= current_user.email %></strong>.
       <%= link_to 'Edit profile', edit_user_registration_path %> |
       <%= link_to "Logout", destroy_user_session_path, method: :delete %>
     <% else%>
       <%= link_to "Sign up", new_user_registration_path %> |
-      <%= link_to "Login", new_user_session_path %> | 
-      <%= link_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter) %>
-      <%= link_to "Sign in with Git Hub", user_omniauth_authorize_path(:github) %>
+      <%= link_to "Login", new_user_session_path %>
     <% end %>
-  </div>
+  </nav>
 </div>
 
 <%= yield %>
