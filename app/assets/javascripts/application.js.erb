@@ -14,3 +14,18 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+	$('#me-photo').hover(
+		function(){
+			$('.blurb.work').css('display', 'none');
+			$('.blurb.spare-time').css('display', 'block');
+			$(this).find('img').attr('src', "<%= asset_path 'me-left.png' %>");
+		},
+		function(){
+			$('.blurb.spare-time').css('display', 'none');
+			$('.blurb.work').css('display', 'block');
+			$(this).find('img').attr('src', "<%= asset_path 'me-right.png' %>");
+		}
+	);
+});

@@ -241,6 +241,7 @@ header#main-header{
 	position:relative;
 	top: 314px;
 	left: 291px;
+	text-align: center;
 }
 
 
@@ -257,16 +258,40 @@ body.about{
 	background:none;
 }
 
-.photo{
-	max-width:300px;
-	max-height:300px;
+.about .container{
+	margin:0 auto;
+}
+
+.about .photo{
+	max-width:350px;
+	max-height:350px;
+	position:absolute;
+	top:120px;
+	left:50%;
+	margin-left:-167px;
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
 	border-radius: 50%;
 	overflow:hidden;
 }
 
-.photo img{
+.about .photo img{
 	width:120%;
 	margin-left:-5%;
+}
+
+.about .blurb{
+	position:absolute;
+	top:40px;
+	width:38%;
+}
+
+.about .blurb.spare-time{
+	left:0;
+	display:none;
+}
+
+.about .blurb.work{
+	right:0;
+	text-align:right;
 }
