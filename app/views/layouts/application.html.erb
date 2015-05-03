@@ -24,7 +24,14 @@
 
     <div id="user-name" class="col-xs-3">
       <% if user_signed_in? %>
-        Logged in as <strong><%= current_user.username %></strong>
+        Logged in as 
+        <strong>
+          <% if current_user.email %>
+            <%= current_user.email %>
+          <% elsif current_user.username %>
+            <%= current_user.username %>
+          <% end %>
+        </strong>
       <% end %>
     </div>
 
