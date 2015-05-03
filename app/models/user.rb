@@ -31,7 +31,7 @@ class User < ActiveRecord::Base
   end
 
   def email_required?
-    super && provider.blank? && !self.require_email
+    super && provider.blank? #&& !self.require_email
   end
 
   def update_with_password(params, *options)
