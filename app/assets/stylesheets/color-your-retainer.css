@@ -1,0 +1,41 @@
+/**************************************/
+/*        COLOR YOUR RETAINER         */
+/**************************************/
+
+#color-your-retainer {
+	width:299px;
+	height:290px;
+	overflow:visible;
+	background-image:url('/assets/uploads/images/color-your-retainer/retainer-bg.png');
+	position:relative;
+	background-color: #bfbfbf; /*Customize me*/
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	border:solid 1px gray;/*this may remove background color issues*/
+}
+
+#retainer-color {
+	width:175px;
+	height:175px;
+	position:absolute;
+	top:60px;
+	left:62px;
+}
+
+.color-btn{
+	cursor:pointer;
+	position:absolute;
+	width:20px;
+	height:20px;
+	top:260px;
+}
+
+#clear{ left:80px; }
+#blue { left:105px; }
+#cyan { left:130px; }
+#green { left:155px; }
+#orange { left:180px; }
+#purple { left:205px; }
+#red { left:230px; }
+#yellow {left:255px;  }

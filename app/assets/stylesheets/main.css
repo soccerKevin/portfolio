@@ -1,0 +1,303 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:700,400);
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px), 
+/*only screen and (min-device-width : 480px) and (max-device-width : 800px) and (orientation : landscape), 
+only screen and (device-width: 768px),*/ 
+only screen and (-webkit-min-device-pixel-ratio : 1.5), 
+only screen and (min-device-pixel-ratio : 1.5), 
+only screen and (-moz-min-device-pixel-ratio: 1.5){
+	**** Responsive ****/
+
+img{
+	max-width:100%;
+}
+
+.container{
+	margin: 0 auto;
+}
+
+/**  End Responsive  **/
+
+
+
+/** classes **/
+.hr-top{
+	background: url('/assets/images/hr-top.png');
+	background-size: 100% 3px;
+	width:100%;
+	height:3px;
+}
+
+.hr-bottom{
+	background: url('/assets/images/hr-bottom.png');
+	background-size: 100% 3px;
+	width:100%;
+	height:3px;
+}
+
+
+
+
+body{
+	background: #161b1d url('/assets/images/hd-bg.png') top center no-repeat;
+	color: white;
+}
+
+#blurb{
+	width:100%;
+	margin:12px auto;
+	text-align:center;
+}
+
+header{
+	width:96%;
+	max-width:600px;
+	margin:0 auto;
+	font-family: 'PT Sans', sans-serif;
+	text-align:center;
+	
+}
+
+#hd-name{
+	width:100%;
+	display:block;
+	margin-top:18px;
+	margin-bottom:9px;
+}
+
+#hd-skill-set{
+	font-size:1.1em;
+	font-weight:bold;
+	color: #8d9294;
+	background: url('/assets/images/skill-bg.png') bottom center no-repeat;
+	background-size:100% 100%;
+}
+
+nav#shuffle-board-nav{
+	width:auto;
+	max-width:750px;
+	margin:5px auto;
+	text-align:center;
+}
+
+nav#shuffle-board-nav div{
+	color:white;
+	padding:5px 7px;
+	margin-bottom:10px;
+	font-size:.9em;
+	background: url('/assets/images/nav-bg.png') left top repeat-x;
+	background-size: auto 200%;
+	transition: background-position .4s;
+	-webkit-transition: background-position .4s; /* Safari */
+	text-decoration:none;
+	display:inline-block;
+	cursor:pointer;
+}
+
+nav#shuffle-board-nav div:hover, nav#shuffle-board-nav div.active{
+	background-position:0 100%;
+	color: #9fe5ff;
+}
+
+#content{
+	min-height:900px;
+	height:100%;
+}
+
+#shuffle-board{
+	position:relative;
+	margin:.8em auto;
+	width:100%;
+}
+
+.slider{display:none;}
+
+.item{
+	position:absolute;
+	max-width:24%;
+	max-height:75px;
+	width:100%;
+	height:75px;
+	/*margin-right:1%;
+	margin-bottom:1%;*/
+	overflow:hidden;
+}
+
+}
+
+/**** Responsive ****/
+
+img{
+	max-width:100%;
+}
+
+.container{
+	margin: 0 auto;
+}
+
+/**  End Responsive  **/
+
+
+
+/** classes **/
+.hr-top{
+	background: url('/assets/images/hr-top.png');
+	background-size: 100% 3px;
+	width:100%;
+	height:3px;
+}
+
+.hr-bottom{
+	background: url('/assets/images/hr-bottom.png');
+	background-size: 100% 3px;
+	width:100%;
+	height:3px;
+}
+
+
+
+
+body{
+	background: #161b1d url('/assets/images/hd-bg.png') top center no-repeat;
+	color: white;
+}
+
+#blurb{
+	width:100%;
+	margin:12px auto;
+	text-align:center;
+}
+
+header{
+	width:96%;
+	max-width:600px;
+	margin:0 auto;
+	font-family: 'PT Sans', sans-serif;
+	text-align:center;
+	
+}
+
+#hd-name{
+	width:100%;
+	display:block;
+	margin-top:18px;
+	margin-bottom:9px;
+}
+
+#hd-skill-set{
+	font-size:1.1em;
+	font-weight:bold;
+	color: #8d9294;
+	background: url('/assets/images/skill-bg.png') bottom center no-repeat;
+	background-size:100% 100%;
+}
+
+nav#shuffle-board-nav{
+	width:auto;
+	max-width:750px;
+	margin:5px auto;
+	text-align:center;
+}
+
+nav#shuffle-board-nav div{
+	color:white;
+	padding:5px 7px;
+	margin-bottom:10px;
+	font-size:.8em;
+	background: url('/assets/images/nav-bg.png') left top repeat-x;
+	background-size: auto 200%;
+	transition: background-position .4s;
+	-webkit-transition: background-position .4s; /* Safari */
+	text-decoration:none;
+	display:inline-block;
+	cursor:pointer;
+}
+
+nav#shuffle-board-nav div:hover, nav#shuffle-board-nav div.active{
+	background-position:0 100%;
+	color: #9fe5ff;
+}
+
+#content{
+	min-height:900px;
+	height:100%;
+}
+
+#shuffle-board{
+	position:relative;
+	margin:.8em auto;
+	width:100%;
+}
+
+.slider{display:none;}
+
+.item{
+	position:absolute;
+	max-width:24%;
+	max-height:75px;
+	width:100%;
+	height:75px;
+	/*margin-right:1%;
+	margin-bottom:1%;*/
+	overflow:hidden;
+}
+
+
+
+
+
+@media screen and (min-width: 40.1em) and (min-device-width:40.1em){
+
+	#blurb{
+		width:84%;
+	}
+
+	#shuffle-board{
+		margin:20px auto;
+	}
+	
+	#hd-skill-set{
+		font-size:1.5em;
+		font-weight:normal;
+	}
+	
+	nav#shuffle-board-nav div{
+		font-size:1.15em;
+	}
+	
+	#content{
+		min-height:900px;
+		height:100%;
+	}
+		
+	.item{
+		position:absolute;
+		overflow:hidden;
+		-webkit-box-shadow: 3px 3px 4px rgba(150, 150, 150, 0.4);
+		-moz-box-shadow:    3px 3px 4px rgba(150, 150, 150, 0.4);
+		box-shadow:         3px 3px 4px rgba(150, 150, 150, 0.4);
+		max-width:150px;
+		max-height:300px;
+		height:auto;
+		width:auto;
+	}
+	
+	.slider{
+		position:absolute;
+		top:100%;
+		display:block;
+		width: 92%;
+		padding: 4% 4%;
+		height: 100%;
+		background: rgba(52, 125, 159, .65);
+		transition: top 1s;
+		color:white;
+		font-weight:bold;
+		font-family:Arial, Helvetica, sans-serif;
+		font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+		text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+	}
+	
+	.item:hover .slider{
+		top:50%;
+	}
