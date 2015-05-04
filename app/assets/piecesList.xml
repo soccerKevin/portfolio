@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<works>
+	<piece>
+		<file>gaelsong.jpg</file>
+		<siteUrl>http://gaelsong.townsendwebdd.com</siteUrl>
+		<desc>Gaelsong</desc>
+		<set>CODE FAVORITE DESIGN GENERAL</set>
+	</piece>
+
+	<piece>
+		<file>braces-painter.jpg</file>
+		<siteUrl>http://www.fairbanksorthodontics.com/brace-painter</siteUrl>
+		<desc>Braces Painter</desc>
+		<set>CODE FAVORITE SESAME</set>
+	</piece>
+
+	<piece>
+		<file>color-retainer.jpg</file>
+		<siteUrl>http://www.forrestortho.com/color-your-retainer</siteUrl>
+		<desc>Color Retainer</desc>
+		<set>CODE SESAME</set>
+	</piece>
+
+	<piece>
+		<file>avengersPoster.jpg</file>
+		<siteUrl>/assets/images/avengers.jpg</siteUrl>
+		<desc>Avengers Movie Poster</desc>
+		<set>DESIGN FAVORITE</set>
+	</piece>
+
+	<!--<piece>
+		<file>chess.jpg</file>
+		<siteUrl>http://chess.townsendwebdd.com</siteUrl>
+		<desc>Playable Chess</desc>
+		<set>CODE</set>
+	</piece>-->
+
+	<piece>
+		<file>greenbay.jpg</file>
+		<siteUrl>http://greenbay.townsendwebdd.com</siteUrl>
+		<desc>Greenbay Website Remake</desc>
+		<set>DESIGN</set>
+	</piece>
+
+	<piece>
+		<file>nuBots2.jpg</file>
+		<siteUrl>/assets/images/nano.jpg</siteUrl>
+		<desc>NuBots Magazine Cover</desc>
+		<set>DESIGN</set>
+	</piece>
+
+	<piece>
+		<file>tetris.jpg</file>
+		<siteUrl>http://tetris.townsendwebdd.com</siteUrl>
+		<desc>Playable Tetris</desc>
+		<set>CODE FAVORITE</set>
+	</piece>
+
+	<piece>
+		<file>hanford.jpg</file>
+		<siteUrl>http://hanford.townsendwebdd.com</siteUrl>
+		<desc>Hanford Downwinders video site</desc>
+		<set>CODE SESAME GENERAL</set>
+	</piece>
+
+	<piece>
+		<file>bgray.jpg</file>
+		<siteUrl>http://www.smiledc.com</siteUrl>
+		<desc>Giannini and Gray Dental Partners</desc>
+		<set>CODE FAVORITE SESAME</set>
+	</piece>
+
+	<piece>
+		<file>diagram.jpg</file>
+		<siteUrl>http://www.smilewny.com/braces-diagram</siteUrl>
+		<desc>Braces Diagram</desc>
+		<set>CODE SESAME</set>
+	</piece>
+
+	<piece>
+		<file>login.jpg</file>
+		<siteUrl>http://www.garylogin.com</siteUrl>
+		<desc>Gary Login ajax-mailer</desc>
+		<set>CODE SESAME SESAME</set>
+	</piece>
+
+	<piece>
+		<file>liberty.jpg</file>
+		<siteUrl>http://www.libertyortho.ca</siteUrl>
+		<desc>Liberty Template</desc>
+		<set>CODE GENERAL SESAME</set>
+	</piece>
+
+	<piece>
+		<file>bayViewOrtho.jpg</file>
+		<siteUrl>http://www.bayviewortho.com</siteUrl>
+		<desc>Bay View Orthodontics</desc>
+		<set>DESIGN SESAME GENERAL</set>
+	</piece>
+
+	<piece>
+		<file>uwDental.jpg</file>
+		<siteUrl>http://www.udadental.com</siteUrl>
+		<desc>UW Dental</desc>
+		<set>DESIGN SESAME GENERAL</set>
+	</piece>
+
+	<piece>
+		<file>placeToBrace.jpg</file>
+		<siteUrl>http://www.theplacetobrace.com</siteUrl>
+		<desc>The Place To Brace</desc>
+		<set>SESAME GENERAL</set>
+	</piece>
+
+	<piece>
+		<file>baesel.jpg</file>
+		<siteUrl>http://www.baeselortho.com</siteUrl>
+		<desc>Baesel Ortho Fixed Bar</desc>
+		<set>CODE SESAME GENERAL</set>
+	</piece>
+
+	<piece>
+		<file>sindelarDental.jpg</file>
+		<siteUrl>http://www.sindelardental.com</siteUrl>
+		<desc>Sindelar Dental</desc>
+		<set>CODE FAVORITE SESAME</set>
+	</piece>
+
+	<piece>
+		<file>stevenson.jpg</file>
+		<siteUrl>http://www.rjstevensondds.com/index.php</siteUrl>
+		<desc>Stevenson (Home Page)</desc>
+		<set>CODE SESAME GENERAL</set>
+	</piece>
+
+	<piece>
+		<file>jarvisOrtho.jpg</file>
+		<siteUrl>http://www.jarvisortho.com</siteUrl>
+		<desc>Jarvis Orthodontics</desc>
+		<set>DESIGN SESAME GENERAL</set>
+	</piece>	
+		
+</works>		
+
