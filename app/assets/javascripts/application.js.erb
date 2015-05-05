@@ -15,9 +15,7 @@
 // require turbolinks
 // require_tree .
 
-$(document).ready(changePic);
-
-function changePic{
+$(document).ready(function(){
 	$('#me-photo').hover(
 		function(){
 			$('.blurb.work').css('display', 'none');
@@ -30,4 +28,4 @@ function changePic{
 			$(this).find('img').attr('src', "<%= asset_path 'me-right.png' %>");
 		}
 	);
-}
+});
