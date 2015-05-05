@@ -35,6 +35,8 @@ gem 'tabs_on_rails'
 gem 'fastimage'
 # gem 'omniauth-linkedin'
 
+gem 'pg'
+
 
 group :production do
   gem 'pg'
