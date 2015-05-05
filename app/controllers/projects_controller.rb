@@ -1,3 +1,5 @@
+require 'fastimage'
+
 class ProjectsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   before_action :set_project, only: [:show, :edit, :update, :destroy]
@@ -6,6 +8,35 @@ class ProjectsController < ApplicationController
   # GET /projects.json
   def index
     @projects = Project.all
+    @pieces = Array.new
+
+    @projects.each do |project|
+      size = FastImage.size "app/assets/images/projects/#{project.pic_url}"
+      @pieces << Array.new([
+                  ActionController::Base.helpers.asset_path('projects/' + project.pic_url, type: :image),
+                  project.site_url, 
+                  size[0], 
+                  size[1], 
+                  project.name,
+                  project.categories
+                  ])
+    end
+
+    @indexes = Array.new
+    @design = Array.new
+    @code = Array.new
+    @sesame = Array.new
+    @general = Array.new
+    @favorite = Array.new
+
+    @pieces.each_with_index do |piece, index| 
+      @indexes << index
+      @design << index if piece[5].include? "DESIGN"
+      @code << index if piece[5].include? "CODE"
+      @sesame << index if piece[5].include? "SESAME"
+      @general << index if piece[5].include? "GENERAL"
+      @favorite << index if piece[5].include? "FAVORITE"
+    end
   end
 
   # GET /projects/1
@@ -83,6 +114,6 @@ class ProjectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params.require(:project).permit(:name, :technologies_used)
+      params.require(:project).permit(:name, :pic_url, :site_url, :categories, :technologies_used)
     end
 end
