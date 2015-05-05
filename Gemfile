@@ -23,20 +23,16 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'email_validator'
-
 gem 'devise'
 gem 'pundit'
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-github'
 gem 'omniauth-facebook'
+# gem 'omniauth-linkedin'
 gem 'rest-client'
 gem 'tabs_on_rails'
 gem 'fastimage'
-# gem 'omniauth-linkedin'
-
-gem 'pg'
-
 
 group :production do
   gem 'pg'
