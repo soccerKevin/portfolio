@@ -88,6 +88,8 @@ GEM
     execjs (2.4.0)
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
+    fastimage (1.6.8)
+      addressable (~> 2.3, >= 2.3.5)
     ffi (1.9.8)
     formatador (0.2.5)
     globalid (0.3.3)
@@ -319,6 +321,7 @@ DEPENDENCIES
   dotenv-rails
   email_spec
   email_validator
+  fastimage
   guard
   guard-minitest
   jbuilder (~> 2.0)
