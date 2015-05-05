@@ -32,7 +32,7 @@ projects = Project.create([
 	{
 		name: 'Avengers Movie Poster',
 		pic_url: 'avengersPoster.jpg',
-		site_url: "/assets/images/avengers.jpg",
+		site_url: "avengers.townsendwebdd.com",
 		categories: 'DESIGN FAVORITE'
 	},
 
@@ -46,7 +46,7 @@ projects = Project.create([
 	{
 		name: 'NuBots Magazne Cover',
 		pic_url: 'nuBots2.jpg',
-		site_url: "/assets/images/nano.jpg",
+		site_url: "nano.townsendwebdd.com",
 		categories: 'DESIGN'
 	},
 
