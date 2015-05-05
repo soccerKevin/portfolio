@@ -12,8 +12,13 @@ class ProjectsController < ApplicationController
 
     @projects.each do |project|
       size = FastImage.size "app/assets/images/projects/#{project.pic_url}"
+      if !project.pic_url.include? "http:"
+        pic = ActionController::Base.helpers.asset_path('projects/' + project.pic_url, type: :image)
+      else
+        pic = project.pic_url
+      end
       @pieces << Array.new([
-                  ActionController::Base.helpers.asset_path('projects/' + project.pic_url, type: :image),
+                  pic,
                   project.site_url, 
                   size[0], 
                   size[1], 
