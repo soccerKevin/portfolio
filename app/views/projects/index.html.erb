@@ -1,23 +1,48 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Projects</h1>
+<nav id="shuffle-board-nav">
+  <div id="all-btn">All</div>
+  <div id="port-btn">DESIGN</div>
+  <div id="jquery-btn">CODE</div>
+  <div id="css-btn">SESAME</div>
+  <div id="sesame-btn">GENERAL</div>
+  <div id="fun-btn">FAVORITE</div>
+</nav>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Technologies used</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div id="content" class="container">
+  <div id="shuffle-board">
+    &nbsp;
+  </div>
+</div>
 
-  <tbody id="all_projects">
-    <% @projects.each do |project| %>
-      <%= render project %>
-    <% end %>
-  </tbody>
-</table>
 
-<br>
+<script>
+	$(document).ready(function(){
+		var pieces = <%= @pieces.to_json.html_safe %>;
+		var items = new Array();
 
-<%= link_to 'New Project', new_project_path, remote: true, id: :add_project %>
+		for(var i = 0, l = pieces.length; i < l; i++)
+			items.push( new Item( 
+					pieces[i][0],
+					pieces[i][1],
+					pieces[i][2],
+					pieces[i][3],
+					pieces[i][4]
+				) );
+			
+		indexes = [<%= @indexes %>,
+										<%= @design %>,
+										<%= @code %>,
+										<%= @sesame %>,
+										<%= @general %>,
+										<%= @favorite %>];
+
+		var board = new ShuffleBoard(items, indexes);
+
+		$( window ).resize(function(){
+			board.resize();
+			board.update(0);
+		});	
+	});
+
+</script>
