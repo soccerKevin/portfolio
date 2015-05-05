@@ -12,10 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+// require turbolinks
 // require_tree .
 
-$(document).ready(function(){
+$(document).ready(changePic);
+$(document).on('load', changePic);
+
+function changePic{
 	$('#me-photo').hover(
 		function(){
 			$('.blurb.work').css('display', 'none');
@@ -28,4 +31,4 @@ $(document).ready(function(){
 			$(this).find('img').attr('src', "<%= asset_path 'me-right.png' %>");
 		}
 	);
-});
+}
