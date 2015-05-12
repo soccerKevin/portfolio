@@ -34,7 +34,7 @@ Devise.setup do |config|
   # config.omniauth :twitter, ENV['TWITTER_CONSUMER_KEY'], ENV['TWITTER_CONSUMER_SECRET']
   config.omniauth :github, ENV['GITHUB_ID'], ENV['GITHUB_SECRET']
   config.omniauth :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_SECRET']
-  config.omniauth :google, ENV['GOOGLE_CLIENT_ID'], ENV['GOOGLE_SECRET']
+  config.omniauth :google_oauth2, ENV['GOOGLE_CLIENT_ID'], ENV['GOOGLE_SECRET']
   config.omniauth :linkedin, ENV['LINKED_IN_APP_ID'], ENV['LINKED_IN_SECRET']
   # config.omniauth :facebook, ENV['FACEBOOK_TEST_APP_ID'], ENV['FACEBOOK_TEST_SECRET']
 
