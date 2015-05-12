@@ -31,9 +31,10 @@ Devise.setup do |config|
   # or not authentication should be aborted when the value is not present.
   # config.authentication_keys = [ :email ]
 
-  config.omniauth :twitter, ENV['TWITTER_CONSUMER_KEY'], ENV['TWITTER_CONSUMER_SECRET']
+  # config.omniauth :twitter, ENV['TWITTER_CONSUMER_KEY'], ENV['TWITTER_CONSUMER_SECRET']
   config.omniauth :github, ENV['GITHUB_ID'], ENV['GITHUB_SECRET']
-  # config.omniauth :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_SECRET']
+  config.omniauth :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_SECRET']
+  config.omniauth :google, ENV['GOOGLE_APP_ID'], ENV['GOOGLE_SECRET']
   # config.omniauth :facebook, ENV['FACEBOOK_TEST_APP_ID'], ENV['FACEBOOK_TEST_SECRET']
 
   # Configure parameters from the request object used for authentication. Each entry
