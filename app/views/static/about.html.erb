@@ -3,10 +3,30 @@
 		In my spare time, I enjoy playing soccer, working out, hiking and spending time with my family.  I try to accomplish something everyday, because life is just too short to waste.
 	</div>
 
+	<div class="skill-set set1 is_set">
+		<% @skill_set1.each do |skill| %>
+			<div class="skill-container left">
+				<span class="left"><%= skill[:name] %></span>
+				<div class="skill left <%= skill[:color] + ' width' + skill[:rank] %>">
+				</div>
+			</div>
+		<% end %>
+	</div>
+
 	<div id="me-photo" class="photo">
-		<img src="<%= asset_path 'me-right.png' %>"/> 
+		<img src="<%= asset_path 'me-right.png' %>"/>
 	</div>
 	<div class="blurb work col-xs-12 col-sm-5">
 		I am a full stack developer who enjoys creating creative solutions.  I am always trying to learn new techniques to improve my abilities.  No problem can't be solved with a little effort and research.
+	</div>
+
+	<div class="skill-set set2 is_set">
+		<% @skill_set2.each do |skill| %>
+			<div class="skill-container right">
+				<span class="right"><%= skill[:name] %></span>
+				<div class="skill right <%= skill[:color]   + ' width' + skill[:rank] %>">
+				</div>
+			</div>
+		<% end %>
 	</div>
 </div>
