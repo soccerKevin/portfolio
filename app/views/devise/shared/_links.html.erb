@@ -18,8 +18,17 @@
   <%= link_to "Didn't receive unlock instructions?", new_unlock_path(resource_name) %><br />
 <% end -%>
 
-<%- if devise_mapping.omniauthable? %>
-  <%- resource_class.omniauth_providers.each do |provider| %>
-    <%= link_to "Sign in with #{provider.to_s.titleize}", omniauth_authorize_path(resource_name, provider) %><br />
-  <% end -%>
-<% end -%>
+<div class="omniauth">
+	<%- if devise_mapping.omniauthable? %>
+	  <%- resource_class.omniauth_providers.each do |provider| %>
+	  <%- provider_class = provider.to_s
+			  	if provider_class.include? 'google'
+			  		provider_class = 'google'
+			  	end %>
+	    <%= link_to omniauth_authorize_path(resource_name, provider), :class => "btn btn-#{provider_class}" do %>
+	    	<i class="fa fa-<%= provider_class %>"></i>&nbsp;&nbsp;
+	    	Sign in with <%= provider.to_s.titleize %>
+	    <% end %>
+	  <% end -%>
+	<% end -%>
+</div>
