@@ -15,6 +15,9 @@
 // require turbolinks
 // require_tree .
 
+carousel_degrees = 72;
+carousel_translate = 144;
+
 $(document).ready(function(){
 	$('#me-photo').hover(
 		function(){
@@ -28,4 +31,21 @@ $(document).ready(function(){
 			$(this).find('img').attr('src', "<%= asset_path 'me-right.png' %>");
 		}
 	);
+
+
+	$('#main-nav a').hover(function(){
+		deg = carousel_degrees;
+		trans = carousel_translate;
+		index = $(this).index();
+		$('#menu-carousel').attr('style', 'transform: translateZ(-' + trans + 'px) rotateY(-' + deg * index + 'deg)');
+	});
+	$('#main-nav').hover(
+		function(){},
+		function(){
+			$('#menu-carousel').attr('style', 'transform: translateZ(0px) rotateY(0deg)');
+		}
+	);
+
 });
+
+

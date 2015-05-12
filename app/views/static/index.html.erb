@@ -1,7 +1,38 @@
 <div class="container">
 
-	<div id="name">
+	<!-- <div id="name">
 		<%= link_to 'Kevin Townsend', about_me_path %>
+	</div> -->
+
+	<section id="social-icons">
+		<%- social_icons = [
+				{name: 'linkedin', link: "" },
+				{name: 'twitter', link: "" },
+				{name: 'github', link: "" },
+				{name: 'blog', link: "" }
+			] %>
+		<% social_icons.each do |icon| %>
+			<div class="card-container">
+				<div class="card <%= icon[:name] %>">
+					<%= link_to icon[:link], class: "front"  do %>
+						<%= image_tag asset_path "#{icon[:name]}-front.png" %>
+					<% end %>
+					<%= link_to icon[:link], class: "back"  do %>
+						<%= image_tag asset_path "#{icon[:name]}-back.png" %>
+					<% end %>
+				</div>
+			</div>
+		<% end %>
+	</section>
+
+	<div id="carousel-container">
+		<div id="menu-carousel">
+			<figure>Kevin Townsend</figure>
+			<figure>Who am I?</figure>
+			<figure>View My Work</figure>
+			<figure>See what people have to say</figure>
+			<figure>Email Me</figure>
+		</div>
 	</div>
 
 	<div class="blurb">
