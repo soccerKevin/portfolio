@@ -7,10 +7,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   def self.from_omniauth(auth)
-    puts auth.provider
-    puts auth.uid
-    puts auth.info.nickname
-    puts auth.info.email
     auth_search = {
       email: auth.info.email
     }
