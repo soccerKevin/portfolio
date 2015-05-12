@@ -35,6 +35,7 @@ Devise.setup do |config|
   config.omniauth :github, ENV['GITHUB_ID'], ENV['GITHUB_SECRET']
   config.omniauth :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_SECRET']
   # config.omniauth :google, ENV['GOOGLE_APP_ID'], ENV['GOOGLE_SECRET']
+  config.omniauth :linkedin, ENV['LINKED_IN_APP_ID'], ENV['LINKED_IN_SECRET']
   # config.omniauth :facebook, ENV['FACEBOOK_TEST_APP_ID'], ENV['FACEBOOK_TEST_SECRET']
 
   # Configure parameters from the request object used for authentication. Each entry
