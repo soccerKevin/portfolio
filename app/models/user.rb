@@ -7,11 +7,17 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   def self.from_omniauth(auth)
-    where(auth.slice(provider: auth.provider, uid: auth.uid)).first_or_create do |user|
+    puts auth.inspect
+    auth_search = {
+      email: auth.info.email
+    }
+
+    # auth.slice(email: auth.info.email, provider: auth.provider, uid: auth.uid)
+    where(auth_search).first_or_create do |user|
       user.provider = auth.provider
-      user.uid = auth.uid
+      user.uid =  auth.uid
       user.username = auth.info.nickname
-      user.email = auth.info.email
+      user.email = auth.uid
     end
   end
 
@@ -31,7 +37,8 @@ class User < ActiveRecord::Base
   end
 
   def email_required?
-    super && provider.blank? #&& !self.require_email
+    false
+    # super && provider.blank? #&& !self.require_email
   end
 
   def update_with_password(params, *options)
@@ -48,5 +55,5 @@ class User < ActiveRecord::Base
 
   def author?
     role == "author"
-  end  
+  end
 end
