@@ -10,8 +10,11 @@ class User < ActiveRecord::Base
     auth_search = {
       email: auth.info.email
     }
+    puts auth.provider
+    puts auth.uid
+    puts auth.info.nickname
+    puts auth.info.email
 
-    # auth.slice(email: auth.info.email, provider: auth.provider, uid: auth.uid)
     where(auth_search).first_or_create do |user|
       user.provider = auth.provider
       user.uid =  auth.uid
@@ -35,10 +38,9 @@ class User < ActiveRecord::Base
     super && provider.blank?
   end
 
-  def email_required?
-    false
-    # super && provider.blank? #&& !self.require_email
-  end
+  # def email_required?
+  #   false
+  # end
 
   def update_with_password(params, *options)
     if encrypted_password.blank?
