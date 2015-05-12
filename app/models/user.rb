@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
     }
 
     # auth.slice(email: auth.info.email, provider: auth.provider, uid: auth.uid)
-    where(auth_search.email).first_or_create do |user|
+    where(email: auth_search.email).first_or_create do |user|
       user.provider = auth.provider
       user.uid =  auth.uid
       user.username = auth.info.nickname
