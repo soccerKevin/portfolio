@@ -7,13 +7,13 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   def self.from_omniauth(auth)
-    auth_search = {
-      email: auth.info.email
-    }
     puts auth.provider
     puts auth.uid
     puts auth.info.nickname
     puts auth.info.email
+    auth_search = {
+      email: auth.info.email
+    }
 
     where(auth_search).first_or_create do |user|
       user.provider = auth.provider
