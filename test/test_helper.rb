@@ -23,7 +23,7 @@ class ActiveSupport::TestCase
   # Add more helper methods to be used by all tests here...
   
   def login_as(role = :author1)
-    visit user_session_path
+    visit new_user_session_path
 
     fill_in "Email", with: users(role).email
     fill_in "Password", with: "password"
