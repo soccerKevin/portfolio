@@ -1,7 +1,5 @@
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 	def all
-		puts "Logging"
-		puts ""
 		puts request.env['omniauth.auth'].inspect
 		user = User.from_omniauth request.env['omniauth.auth']
 		if user.persisted?
@@ -13,13 +11,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 		end
 	end
 
-	def google_oauth2
-		puts "Logging"
-		puts ""
-	end
-
 	alias_method :facebook, :all
 	alias_method :github, :all
-	# alias_method :google_oauth2, :all
+	alias_method :google_oauth2, :all
 	alias_method :linkedin, :all
 end
