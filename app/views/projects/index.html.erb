@@ -2,10 +2,11 @@
 
 <nav id="shuffle-board-nav">
   <div id="all-btn">All</div>
-  <div id="port-btn">DESIGN</div>
-  <div id="jquery-btn">CODE</div>
-  <div id="css-btn">SESAME</div>
-  <div id="sesame-btn">GENERAL</div>
+  <div id="design-btn">DESIGN</div>
+  <div id="code-btn">CODE</div>
+  <div id="ruby-btn">RUBY</div>
+  <div id="sesame-btn">WORK</div>
+  <div id="general-btn">GENERAL</div>
   <div id="fun-btn">FAVORITE</div>
 </nav>
 
@@ -22,18 +23,19 @@
 		var items = new Array();
 
 		for(var i = 0, l = pieces.length; i < l; i++)
-			items.push( new Item( 
+			items.push( new Item(
 					pieces[i][0],
 					pieces[i][1],
 					pieces[i][2],
 					pieces[i][3],
 					pieces[i][4]
 				) );
-			
+
 		indexes = [<%= @indexes %>,
 										<%= @design %>,
 										<%= @code %>,
-										<%= @sesame %>,
+										<%= @ruby %>,
+										<%= @work %>,
 										<%= @general %>,
 										<%= @favorite %>];
 
@@ -42,7 +44,7 @@
 		$( window ).resize(function(){
 			board.resize();
 			board.update(0);
-		});	
+		});
 	});
 
 </script>
