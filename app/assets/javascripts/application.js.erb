@@ -44,7 +44,7 @@ $(document).ready(function(){
 		deg = carousel_degrees;
 		trans = carousel_translate;
 		index = $(this).index();
-		$('#menu-carousel').attr('style', '-webkit-transform: translateZ(-' + trans + 'px) rotateY(-' + deg * index + 'deg); transform: translateZ(-' + trans + 'px) rotateY(-' + deg * index + 'deg)');
+		$('#menu-carousel').attr('style', '-webkit-transform: rotateY(-' + deg * index + 'deg); transform: rotateY(-' + deg * index + 'deg)');
 	});
 	$('#main-nav').hover(
 		function(){},
