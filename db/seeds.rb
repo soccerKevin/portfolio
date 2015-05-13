@@ -51,6 +51,12 @@ projects = Project.create([
 		categories: 'CODE FAVORITE'
 	},
 	{
+		name: 'Invoice.re',
+		pic_url: 'invoice.jpg',
+		site_url: "https://www.invoice.re/",
+		categories: 'RUBY FAVORITE GENERAL'
+	},
+	{
 		name: 'Hanford Downwinders videosite',
 		pic_url: 'hanford.jpg',
 		site_url: "http://hanford.townsendwebdd.com",
@@ -79,6 +85,12 @@ projects = Project.create([
 		pic_url: 'liberty.jpg',
 		site_url: "http://www.libertyortho.ca",
 		categories: 'CODE GENERAL WORK'
+	},
+	{
+		name: 'TV Tracker',
+		pic_url: 'tv_tracker.jpg',
+		site_url: "http://tv-tracker.herokuapp.com",
+		categories: 'RUBY FAVORITE GENERAL'
 	},
 	{
 		name: 'Bay View Orthodontics',
@@ -121,17 +133,5 @@ projects = Project.create([
 		pic_url: 'jarvisOrtho.jpg',
 		site_url: "http://www.jarvisortho.com",
 		categories: 'DESIGN WORK GENERAL'
-	},
-	{
-		name: 'TV Tracker',
-		pic_url: 'tv_tracker.jpg',
-		site_url: "http://tv-tracker.herokuapp.com",
-		categories: 'RUBY FAVORITE GENERAL'
-	},
-	{
-		name: 'Invoice.re',
-		pic_url: 'invoice.jpg',
-		site_url: "https://www.invoice.re/",
-		categories: 'RUBY FAVORITE GENERAL'
 	}
 ])
