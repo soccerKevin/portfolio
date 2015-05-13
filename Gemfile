@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.2.2'
 
 gem 'dotenv-rails', group: [:development, :test], :require => 'dotenv/rails-now'
 
@@ -34,6 +35,8 @@ gem 'omniauth-linkedin'
 gem 'rest-client'
 gem 'tabs_on_rails'
 gem 'fastimage'
+
+gem 'rails_12factor'
 
 group :production do
   gem 'pg'
