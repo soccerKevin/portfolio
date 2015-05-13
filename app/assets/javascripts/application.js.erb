@@ -44,12 +44,12 @@ $(document).ready(function(){
 		deg = carousel_degrees;
 		trans = carousel_translate;
 		index = $(this).index();
-		$('#menu-carousel').attr('style', 'transform: translateZ(-' + trans + 'px) rotateY(-' + deg * index + 'deg)');
+		$('#menu-carousel').attr('style', '-webkit-transform: translateZ(-' + trans + 'px) rotateY(-' + deg * index + 'deg); transform: translateZ(-' + trans + 'px) rotateY(-' + deg * index + 'deg)');
 	});
 	$('#main-nav').hover(
 		function(){},
 		function(){
-			$('#menu-carousel').attr('style', 'transform: translateZ(0px) rotateY(0deg)');
+			$('#menu-carousel').attr('style', '-webkit-transform: translateZ(0px) rotateY(0deg); transform: translateZ(0px) rotateY(0deg)');
 		}
 	);
 
