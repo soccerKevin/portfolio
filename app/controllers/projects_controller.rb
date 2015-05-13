@@ -19,9 +19,9 @@ class ProjectsController < ApplicationController
       end
       @pieces << Array.new([
                   pic,
-                  project.site_url, 
-                  size[0], 
-                  size[1], 
+                  project.site_url,
+                  size[0],
+                  size[1],
                   project.name,
                   project.categories
                   ])
@@ -30,15 +30,17 @@ class ProjectsController < ApplicationController
     @indexes = Array.new
     @design = Array.new
     @code = Array.new
-    @sesame = Array.new
+    @ruby = Array.new
+    @work = Array.new
     @general = Array.new
     @favorite = Array.new
 
-    @pieces.each_with_index do |piece, index| 
+    @pieces.each_with_index do |piece, index|
       @indexes << index
       @design << index if piece[5].include? "DESIGN"
       @code << index if piece[5].include? "CODE"
-      @sesame << index if piece[5].include? "SESAME"
+      @ruby << index if piece[5].include? "RUBY"
+      @work << index if piece[5].include? "WORK"
       @general << index if piece[5].include? "GENERAL"
       @favorite << index if piece[5].include? "FAVORITE"
     end
